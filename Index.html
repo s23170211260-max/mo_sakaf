@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO & Accessibility Meta Tags -->
+    <meta name="description" content="البورتفليو الشخصي لمحمد عمر السقاف - مغني، موسيقي، مطور واجهات ويب، ومصمم UI/UX.">
+    <meta name="keywords" content="محمد عمر السقاف, مطور ويب, مصمم, مغني, موسيقي, Front-End, UI, UX, Portfolio">
+    <meta property="og:title" content="محمد عمر عبدالقادر السقاف | Portfolio">
+    <meta property="og:description" content="الملف الشخصي وأعمال محمد السقاف.">
+    <meta property="og:type" content="website">
+    
+    <title>محمد عمر عبدالقادر السقاف | Portfolio</title>
+    
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&amp;display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- CHECKBOX FOR MENU TOGGLE -->
+    <input type="checkbox" id="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="menu-overlay" aria-label="إغلاق القائمة"></label>
+
+    <!-- SIDEBAR MENU -->
+    <aside class="sidebar-menu glass" aria-label="القائمة الجانبية">
+        <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 2rem; text-align:right" data-en="Main Menu">القائمة الرئيسية</h3>
+        <a href="#home" class="sidebar-link" data-en="🏠 Home">🏠 الرئيسية</a>
+        <a href="#about" class="sidebar-link delay-1" data-en="👤 About Me">👤 من أنا</a>
+        <a href="#profile-summary" class="sidebar-link delay-2" data-en="📄 Profile">📄 الملف الشخصي</a>
+        <a href="#education" class="sidebar-link delay-3" data-en="🎓 Education">🎓 التعليم</a>
+        <a href="#experience" class="sidebar-link delay-4" data-en="💼 Experience">💼 الخبرات العملية</a>
+        <a href="#courses" class="sidebar-link delay-5" data-en="📜 Courses & Training">📜 الدورات والتدريب</a>
+        <a href="#roles" class="sidebar-link delay-1" data-en="🏆 Achievements">🏆 الإنجازات </a>
+        <a href="#portfolio" class="sidebar-link delay-2" data-en="🎨 Portfolio">🎨 معرض الأعمال</a>
+        <a href="#contact" class="sidebar-link delay-3" data-en="📞 Contact Me">📞 تواصل معي</a>
+        <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: var(--text-muted); font-size: 0.8rem;" data-en="&copy; 2026 Mohammed Omar Al-Saggaf – All Rights Reserved">
+           &copy; 2026 محمد عمر عبدالقادر السقاف – جميع الحقوق محفوظة
+        </div>
+    </aside>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" aria-label="القائمة العلوية">
+        <a href="#home" class="nav-logo" aria-label="الصفحة الرئيسية">
+            <img src="Image/شعاري الرسمي.png" alt="شعار محمد السقاف">
+        </a>
+        <div class="nav-controls">
+            <button id="lang-btn" class="lang-btn" onclick="toggleLanguage()" aria-label="تغيير اللغة">English</button>
+            <label for="nav-toggle" class="hamburger" aria-label="القائمة">
+                <span></span><span></span><span></span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero" id="home">
+        <!-- Canvas for custom particles -->
+        <canvas id="particles-js"></canvas>
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="hero-content reveal reveal-slide-up">
+                <div class="profile-img-container">
+                    <img src="Image/صورتي الرسمية.png" alt="صورة شخصية" class="profile-img">
+                </div>
+                <h1 data-en="Mohammed Omar Al-Saggaf">محمد عمر عبدالقادر السقاف</h1>
+                <p class="typing-text" data-en="Singer | Musician | Front-End Developer | UI/UX Designer | Video Editor" data-ar="مغني  |  موسيقي  |  مطور واجهات ويب  |  مصمم UI/UX&rlm;  |  مونتير">مغني  |  موسيقي  |  مطور واجهات ويب  |  مصمم UI/UX&rlm;  |  مونتير</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-fill" data-en="Get Started">ابدأ التصفح</a>
+                    <a href="#portfolio" class="btn glass" data-en="My Portfolio">معرض أعمالي</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse"><div class="wheel"></div></div>
+            <span style="font-size: 0.8rem; letter-spacing: 2px;">SCROLL</span>
+        </div>
+    </section>
+
+    <!-- 2. ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title reveal reveal-slide-up" data-en="Who Am I?">من أنا؟</h2>
+            <div class="about-text reveal reveal-fade">
+                <p data-en="Singer and Nay/Clarinet player, IT student at Hadhramout University. I work as a Front-End Developer and UI/UX Designer, with a strong interest in video editing and content creation.">
+                    مغنّي وعازف على آلة الناي والكلارنيت وطالب تقنية معلومات بجامعة حضرموت , أعمل في مجال تطوير واجهات الويب (Front-End Developer) وتصميم تجربة وواجهة المستخدم (UI/UX Designer) ولدي اهتمام بالمونتاج وصناعة المحتوى.
+                </p>
+                <p data-en="I have participated in numerous cultural and artistic events and contributed to organizing and managing student and media activities both inside and outside the university. I aspire for my voice and music to reach a global audience and to present works that merge art with technology, reflecting a contemporary creative identity.">
+                    شاركت في عدد من الفعاليات الفنية والثقافية وأسهمت في تنظيم وإدارة أنشطة طلابية وإعلامية داخل الجامعة وخارجها , أطمح أن يصل صوتي وعزفي للخارج وأن أقدم أعمالاً تدمج بين الفن والتقنية وتعكس هوية إبداعية معاصرة.
+                </p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card glass-card reveal reveal-zoom delay-1">
+                    <span class="stat-number" data-target="10" data-suffix="+">0</span>
+                    <span class="stat-text" data-en="Years of Experience in Nay Playing">سنوات خبرة في عزف الناي</span>
+                </div>
+                <div class="stat-card glass-card reveal reveal-zoom delay-2">
+                    <span class="stat-number" data-target="5" data-suffix="+">0</span>
+                    <span class="stat-text" data-en="Programming Projects">مشاريع برمجية</span>
+                </div>
+                <div class="stat-card glass-card reveal reveal-zoom delay-3">
+                    <span class="stat-number" data-target="100" data-suffix="+">0</span>
+                    <span class="stat-text" data-en="Events">فعالية</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PROFILE SUMMARY -->
+    <section id="profile-summary">
+        <div class="container">
+            <h2 class="section-title reveal reveal-slide-up" data-en="Profile">الملف الشخصي</h2>
+            <div class="profile-layout">
+                <div class="profile-top-section">
+                    <div class="sidebar-card glass-card reveal reveal-slide-right">
+                        <h3 data-en="📄 Personal Info">📄 البيانات الشخصية</h3>
+                        <ul class="sidebar-list">
+                            <li><span data-en="Nationality:">الجنسية:</span> <span data-en="Yemeni">يمني</span></li>
+                            <li><span data-en="DOB:">تاريخ الميلاد:</span> <span data-en="July 19, 2004">19 يوليو 2004</span></li>
+                            <li><span data-en="Address:">العنوان:</span> <span data-en="Yemen - Hadhramout">اليمن - حضرموت</span></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-card glass-card reveal reveal-slide-left">
+                        <h3 data-en="🌍 Languages">🌍 اللغات</h3>
+                        <div class="lang-container">
+                            <div class="lang-item">
+                                <div class="lang-header"><span data-en="Arabic">العربية</span><span class="lang-level" data-en="Native">اللغة الأم (Native)</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="100%"></div></div>
+                            </div>
+                            <div class="lang-item">
+                                <div class="lang-header"><span data-en="English">الإنجليزية</span><span class="lang-level" data-en="Good">مستوى جيد (Good)</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="75%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-content glass-card reveal reveal-slide-up">
+                    <h3 data-en="🔥 Skills & Interests" style="text-align:center; font-size: 2rem; color: var(--accent); margin-bottom: 20px;">🔥 المهارات والاهتمامات</h3>
+                    <div class="skills-detailed-grid">
+                        <div class="skill-group reveal reveal-blur delay-1">
+                            <h4 data-en="🎤 Music & Singing">🎤 الموسيقى والغناء</h4>
+                            <ul>
+                                <li data-en="Live Singing & Vocal Performance">الغناء والأداء الصوتي المباشر</li>
+                                <li data-en="Playing Nay & Clarinet">العزف على آلة الناي والكلارنيت</li>
+                                <li data-en="Music Composition">التلحين و التأليف الموسيقي</li>
+                                <li data-en="Live Event Participation">المشاركة في العروض والفعاليات الحيّة</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group reveal reveal-blur delay-2">
+                            <h4 data-en="💻 Web Development">💻 تطوير واجهات الويب</h4>
+                            <ul>
+                                <li data-en="HTML/CSS/JS">بناء واجهات ويب HTML/CSS/JS</li>
+                                <li data-en="Responsive Design">تصميم صفحات متجاوبة</li>
+                                <li data-en="Design to Code">تحويل التصاميم إلى كود</li>
+                                <li data-en="UX Content Organization">تنظيم المحتوى وتجربة المستخدم</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group reveal reveal-blur delay-3">
+                            <h4 data-en="🎨 UI / UX Design">🎨 تصميم UI / UX</h4>
+                            <ul>
+                                <li data-en="Simple UI Design">تصميم واجهات مستخدم بسيطة</li>
+                                <li data-en="UX Improvement">تحسين تجربة المستخدم</li>
+                                <li data-en="Figma">العمل على Figma</li>
+                                <li data-en="Web & Mobile Interfaces">تصميم واجهات للويب والموبايل وسطح المكتب</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group reveal reveal-blur delay-1">
+                            <h4 data-en="🎬 Video Editing">🎬 المونتاج</h4>
+                            <ul>
+                                <li data-en="CapCut Editing">مونتاج فيديو CapCut</li>
+                                <li data-en="Visual Content Creation">صناعة محتوى مرئي</li>
+                                <li data-en="Reels & Short Films">إخراج الريلز و الاأفلام القصيرة</li>
+                                <li data-en="Audio/Video Sync">تنسيق الصوت والصورة</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group reveal reveal-blur delay-2">
+                            <h4 data-en="✨ Unique Skills">✨ المهارات المميّزة</h4>
+                            <ul>
+                                <li data-en="Photography & Videography Hobby">هاوي تصوير الفيديو  والفوتوغرافي</li>
+                                <li data-en="Merging Music with Content">دمج الموسيقى مع المحتوى</li>
+                                <li data-en="Artistic Content Design">تصميم محتوى فني</li>
+                                <li data-en="Audio/Visual Sense">الإحساس البصري والسمعي</li>
+                                <li data-en="Art & Tech Projects">مشاريع تجمع الفن والتقنية</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group reveal reveal-blur delay-3">
+                            <h4 data-en="🧠 Soft Skills">🧠 مهارات شخصية</h4>
+                            <ul>
+                                <li data-en="Content Management">تنظيم وإدارة المحتوى</li>
+                                <li data-en="Leadership & Teamwork">القيادة والعمل الجماعي</li>
+                                <li data-en="Event Coordination">تنسيق الفعاليات</li>
+                                <li data-en="Commitment & Quality">الالتزام والجودة</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. TIMELINE SECTION (EDUCATION & EXPERIENCE) -->
+    <section id="education" style="padding-bottom: 0;">
+        <div class="container">
+            <h2 class="section-title reveal reveal-slide-up" data-en="Education & Experience">التعليم والخبرات</h2>
+            
+            <h3 style="text-align:center; color: var(--text-main); font-size: 2rem; margin-bottom: 30px;" class="reveal reveal-fade" data-en="🎓 Education">🎓 التعليم</h3>
+            <div class="timeline-wrapper" style="margin-bottom: 80px;">
+                <div class="timeline-item reveal reveal-slide-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date" data-en="2023 - Present">2023 - الحاضر</span>
+                        <h3 class="timeline-title" data-en="Bachelor of IT">بكلاريوس تقنية معلومات</h3>
+                        <span class="timeline-place" data-en="Hadhramout University">جامعة حضرموت</span>
+                        <p class="timeline-desc" data-en="3rd Year (Ongoing)">المستوى الثالث (قيد الدراسة)</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-slide-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date" data-en="Graduated">متخرج</span>
+                        <h3 class="timeline-title" data-en="High School Diploma">شهادة الثانوية العامة</h3>
+                        <span class="timeline-place" data-en="Dar Al-Mustafa High School">ثانوية دار المصطفى الاهلية</span>
+                        <p class="timeline-desc" data-en="Scientific Section - 85.375%">القسم العلمي – نسبة 85.375%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" style="padding-top: 0;">
+        <div class="container">
+            <h3 style="text-align:center; color: var(--text-main); font-size: 2rem; margin-bottom: 30px;" class="reveal reveal-fade" data-en="💼 Work Experience">💼 الخبرات العملية</h3>
+            <div class="timeline-wrapper">
+                <div class="timeline-item reveal reveal-slide-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date" data-en="Present">الحاضر</span>
+                        <h3 class="timeline-title" data-en="Web Developer & UI/UX Designer">مطور واجهات ويب ومصمم UI/UX</h3>
+                        <span class="timeline-place" data-en="Craftfolio"><a href="https://craftfoliostudio4.github.io/Officialwebsite/" target="_blank" style="color: var(--accent); text-decoration: none;">شركة كرافتفوليو (Craftfolio)</a></span>
+                        <p class="timeline-desc" data-en="Currently working as a Web Developer and UI/UX Designer at Craftfolio company.">أعمل حالياً كمطور واجهات ويب ومصمم تجربة وواجهة المستخدم (UI/UX) لدى شركة كرافتفوليو.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-slide-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date" data-en="2020 - Present">2020 - الحاضر</span>
+                        <h3 class="timeline-title" data-en="Freelance Artist & Musician">فنان وموسيقي مستقل</h3>
+                        <span class="timeline-place" data-en="Freelance">عمل حر (Freelance)</span>
+                        <p class="timeline-desc" data-en="Performing at parties and cultural events, recording audio artworks, and professional playing of Nay and Madrof instruments.">إحياء الحفلات والمناسبات الثقافية، تسجيل الأعمال الفنية الصوتية، والعزف الاحترافي على آلة الناي والمدروف.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-slide-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date" data-en="2023 - Present">2023 - الحاضر</span>
+                        <h3 class="timeline-title" data-en="Web Developer / UI UX Designer">مطور واجهات ويب / مصمم UI UX</h3>
+                        <span class="timeline-place" data-en="Future Code Team">فريق فيوتشر كود (Future Code)</span>
+                        <p class="timeline-desc" data-en="Working within a specialized software team, responsible for UX/UI design, and implementing designs into interactive web interfaces.">العمل ضمن فريق برمجي متخصص، مسؤول عن تصميم تجربة (UX) وواجهة المستخدم (UI)، وتنفيذ التصاميم وتحويلها إلى واجهات ويب تفاعلية.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-slide-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date" data-en="2026">2026</span>
+                        <h3 class="timeline-title" data-en="Head of Cultural Committee">رئيس اللجنة الثقافية</h3>
+                        <span class="timeline-place" data-en="15th Creativity Forum (Hadhramout Foundation)">ملتقى الإبداع الـ15 (مؤسسة حضرموت)</span>
+                        <p class="timeline-desc" data-en="Supervising cultural and creative activities for students, organizing exhibition corners, the closing ceremony, and all forum activities.">الإشراف على الأنشطة الثقافية والإبداعية للطلاب، وتنظيم أركان وفعاليات المعرض والحفل الختامي وجميع أنشطة الملتقى.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-slide-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date" data-en="Nov 2025">نوفمبر 2025</span>
+                        <h3 class="timeline-title" data-en="Event Coordinator">منسق فعاليات ومنظم احترافي</h3>
+                        <span class="timeline-place" data-en="Basma Trading & Real Estate Development">شركة بسمة للتجارة والتطوير العقاري</span>
+                        <p class="timeline-desc" data-en="Coordinating and preparing for 'Tadamun Forum 2025', managing logistics and teams to ensure event success.">التنسيق والتحضير لـ "منتدى تضامن 2025"، وإدارة العمليات اللوجستية وفرق العمل لضمان نجاح الفعالية.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-slide-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date" data-en="2025 - 2026">2025 - 2026</span>
+                        <h3 class="timeline-title" data-en="Head of Cultural Committee">رئيس اللجنة الثقافية</h3>
+                        <span class="timeline-place" data-en="Ahmed Student Center">مركز أحمد للطالب الجامعي</span>
+                        <p class="timeline-desc" data-en="Supervising cultural and creative activities for students, organizing events and workshops to enhance creativity and personal skills.">الإشراف على الأنشطة الثقافية والإبداعية للطلاب، وتنظيم الفعاليات وورش العمل لتعزيز الإبداع والمهارات الشخصية.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-slide-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date" data-en="2023 - 2024">2023 - 2024</span>
+                        <h3 class="timeline-title" data-en="Media Officer & Content Creator">مسؤول إعلامي وصانع محتوى</h3>
+                        <span class="timeline-place" data-en="Tech Club - Hadhramout University">النادي التقني - جامعة حضرموت</span>
+                        <p class="timeline-desc" data-en="Managing the media committee, documenting student events and activities, and designing the club's visual identity and digital content.">إدارة اللجنة الإعلامية وتوثيق الفعاليات والأنشطة الطلابية، وتصميم الهوية البصرية والمحتوى الرقمي للنادي.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-slide-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date" data-en="2021 - Present">2021 - الحاضر</span>
+                        <h3 class="timeline-title" data-en="Student Committee Member">عضوا في اللجان الطلابية بالجامعة</h3>
+                        <span class="timeline-place" data-en="Hadhramout University">جامعة حضرموت</span>
+                        <p class="timeline-desc" data-en="Leading and organizing events, planning and supervising student activities and achieving their goals.">قيادة وتنظيم الفعاليات والتخطيط والإشراف على الأنشطة الطلابية وتحقيق أهدافها.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-slide-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date" data-en="2020 - 2023">2020 - 2023</span>
+                        <h3 class="timeline-title" data-en="Intensive Volunteering">نشاط تطوعي مكثف</h3>
+                        <span class="timeline-place" data-en="Various Community Initiatives">مبادرات مجتمعية متنوعة</span>
+                        <p class="timeline-desc" data-en="Participated in organizing and implementing 6+ community initiatives focused on: relief, environmental service, and humanitarian aid.">شاركت في تنظيم وتنفيذ 6+ مبادرات مجتمعية تركزت على: الإغاثة، والخدمة البيئية، والإغاثة الإنسانية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. COURSES & TRAINING -->
+    <section id="courses">
+        <div class="container">
+            <h2 class="section-title reveal reveal-slide-up" data-en="Courses & Training">الدورات العلمية والتدريبية</h2>
+            <div class="courses-grid">
+                <div class="course-card glass-card reveal reveal-zoom delay-1">
+                    <div class="course-icon">🧠</div>
+                    <div class="course-info">
+                        <h3 data-en="Skills Development Package">حزمة دورات تنمية المهارات</h3>
+                        <span class="place" data-en="Hadhramout Gifted Institute">معهد حضرموت للموهوبين</span>
+                        <span class="date" data-en="2024">2024</span>
+                        <ul class="course-details-list">
+                            <li data-en="Self-Learning Planning (4 hours) - Feb 27">التخطيط للتعلم الذاتي (4 ساعات) - 27 فبراير</li>
+                            <li data-en="Time & Priority Management (4 hours) - Mar 4">إدارة الوقت والأولويات (4 ساعات) - 4 مارس</li>
+                            <li data-en="Speed Reading Skills (4 hours) - Sep 23">مهارات القراءة السريعة (4 ساعات) - 23 سبتمبر</li>
+                            <li data-en="Digital Learning Platforms (4 hours) - Oct 17">التعلم عبر المنصات الرقمية (4 ساعات) - 17 أكتوبر</li>
+                            <li data-en="Online Research (4 hours) - Oct 21">البحث الإلكتروني (4 ساعات) - 21 أكتوبر</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course-card glass-card reveal reveal-zoom delay-2">
+                    <div class="course-icon">📚</div>
+                    <div class="course-info">
+                        <h3 data-en="26th Scientific Course">الدورة العلمية السادسة والعشرون</h3>
+                        <span class="place" data-en="Dar Al-Mustafa for Islamic Studies">دار المصطفى للدراسات الإسلامية</span>
+                        <span class="date" data-en="June - August 2020">يونيو - أغسطس 2020</span>
+                        <ul class="course-details-list">
+                            <li data-en="Hadith: Explanation of Qatwat Al-Thabiteen">الحديث: شرح كتاب قطوة الثابتين</li>
+                            <li data-en="Shafi'i Fiqh: Al-Qadima & Al-Tanbih">الفقه الشافعي: القديمة المحضرة والتنبيه</li>
+                            <li data-en="Creed: Aqidat Al-Islam by Imam Al-Haddad">العقيدة: عقيدة الإسلام للإمام الحداد</li>
+                            <li data-en="Tazkiyah: Al-Hikam Al-Ata'iyyah">التزكية: الحكم العطائية وقصيدة يا صاحب البشر</li>
+                            <li data-en="Prophetic Biography & Da'wah Stages">السيرة النبوية ومراحل الدعوة</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <div class="course-card glass-card reveal reveal-zoom delay-3">
+                    <div class="course-icon">🕌</div>
+                    <div class="course-info">
+                        <h3 data-en="Quran Recitation Completion (Two Readings)">إتمام تلاوة القرآن الكريم بالقرأتين </h3>
+                        <span class="place" data-en="Ribat Al-Ilm Al-Sharif - Seiyun">رباط العلم الشريف - سيئون</span>
+                        <span class="date" data-en="Nov 29, 2020">29 نوفمبر 2020</span>
+                        <ul class="course-details-list">
+                            <li data-en="Ijaza in Hafs an Asim & Qalun an Nafi">إجازة برواية حفص عن عاصم وعن قالون عن نافع</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course-card glass-card reveal reveal-zoom delay-1">
+                    <div class="course-icon">🇬🇧</div>
+                    <div class="course-info">
+                        <h3 data-en="English Course (Top Notch 2A)">دورة اللغة الإنجليزية (Top Notch 2A)</h3>
+                        <span class="place" data-en="Modern International Institute">المعهد الدولي الحديث</span>
+                        <span class="date" data-en="Dec 2022 - Jan 2023">ديسمبر 2022 - يناير 2023</span>
+                        <ul class="course-details-list">
+                            <li data-en="Duration: 50 Training Hours">المدة: 50 ساعة تدريبية</li>
+                            <li data-en="Grade: 72% (Good)">التقدير: 72% (جيد)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course-card glass-card reveal reveal-zoom delay-2">
+                    <div class="course-icon">📈</div>
+                    <div class="course-info">
+                        <h3 data-en="Digital Marketing Fundamentals">أساسيات التسويق الرقمي</h3>
+                        <span class="place" data-en="Al-Qudsi Business Services (Online)">شركة القدسي لخدمات الأعمال (أونلاين)</span>
+                        <span class="date" data-en="Aug 27, 2022">27 أغسطس 2022</span>
+                        <ul class="course-details-list">
+                            <li data-en="E-Marketing Basics">أساسيات التسويق الإلكتروني</li>
+                            <li data-en="Social Media Marketing">التسويق عبر التواصل الاجتماعي</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <div class="course-card glass-card reveal reveal-zoom delay-3">
+                    <div class="course-icon">📖</div>
+                    <div class="course-info">
+                        <h3 data-en="24th Sub-Scientific Course">الدورة العلمية الرابعة والعشرون الفرعية</h3>
+                        <span class="place" data-en="Dar Al-Mustafa for Islamic Studies">دار المصطفى للدراسات الإسلامية</span>
+                        <span class="date" data-en="July 2018">يوليو 2018</span>
+                        <ul class="course-details-list">
+                            <li data-en="Intensive Lessons in Sharia Sciences">دروس مكثفة في علوم الشريعة المطهرة</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course-card glass-card reveal reveal-zoom delay-1">
+                    <div class="course-icon">🤖</div>
+                    <div class="course-info">
+                        <h3 data-en="School Robotics Program">برنامج الروبوت المدرسي</h3>
+                        <span class="place" data-en="Seiyun Gifted Academy">أكاديمية الموهوبين سيئون</span>
+                        <span class="date" data-en="Feb 2018">فبراير 2018</span>
+                        <ul class="course-details-list">
+                            <li data-en="Robot Programming & Assembly">برمجة وتركيب الروبوت الآلي</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ACHIEVEMENTS -->
+    <section id="roles">
+        <div class="container">
+            <h2 class="section-title reveal reveal-slide-up" data-en="Achievements">الإنجازات</h2>
+            <div class="roles-grid">
+                <div class="role-card glass-card reveal reveal-blur delay-1">
+                    <h3 class="role-title" data-en="Local Scholarship Recipient">حاصل على منحة دراسية محلية</h3>
+                    <p style="color: var(--accent)" data-en="Hadhramout Foundation (Human Development) (2023)">مؤسسة حضرموت ( تنمية بشرية ) (2023)</p>
+                    <p style="font-size:0.9rem; color:#888; margin-top:10px;" data-en="For IT Bachelor program at Hadhramout University">لبرنامج بكالوريوس تقنية المعلومات بجامعة حضرموت</p>
+                </div>
+                <div class="role-card glass-card reveal reveal-blur delay-2">
+                    <h3 class="role-title" data-en="Student Creativity Award Winner">فائز بجائزة الإبداع الطلابي</h3>
+                    <p style="color: var(--accent)" data-en="Hadhramout University (2024)">جامعة حضرموت (2024)</p>
+                    <p style="font-size:0.9rem; color:#888; margin-top:10px;" data-en="3rd Place - University Vocalist">المركز الثالث - منشد الجامعة</p>
+                </div>
+                <div class="role-card glass-card reveal reveal-blur delay-3">
+                    <h3 class="role-title" data-en="Academic Excellence Certificates">شهادات تفوق دراسي</h3>
+                    <p style="color: var(--accent)" data-en="Dar Al-Mustafa High School (2017-2022)">ثانوية دار المصطفى (2017-2022)</p>
+                    <p style="font-size:0.9rem; color:#888; margin-top:10px;" data-en="Top Ranks (Top 5)">مراتب متقدمة (الخمسة الأوائل)</p>
+                </div>
+                <div class="role-card glass-card reveal reveal-blur delay-4">
+                    <h3 class="role-title" data-en="Cultural Events Participation">مشاركة في فعاليات ثقافية</h3>
+                    <p style="color: var(--accent)" data-en="Various Entities (2019-2026)">عدة جهات (2019-2026)</p>
+                    <p style="font-size:0.9rem; color:#888; margin-top:10px;" data-en="Success of Creativity Forums 14 & 15, university and volunteer events">إنجاح ملتقيات الإبداع 14 و 15 و فعاليات تابعة للجامعة و ايضا تطوعية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PORTFOLIO SECTION -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title reveal reveal-slide-up" data-en="Portfolio">معرض الأعمال</h2>
+            
+            <div class="tabs-nav reveal reveal-fade">
+                <button class="tab-btn active" data-target="content-singing" data-en="🎤 Singing">🎤 الغناء</button>
+                <button class="tab-btn" data-target="content-music" data-en="🎶 Music">🎶 الموسيقى</button>
+                <button class="tab-btn" data-target="content-frontend" data-en="💻 Front-End">💻 Front-End</button>
+                <button class="tab-btn" data-target="content-uiux" data-en="🎨 UI/UX">🎨 UI/UX</button>
+                <button class="tab-btn" data-target="content-montage" data-en="🎬 Montage">🎬 المونتاج</button>
+            </div>
+
+            <div class="content-container reveal reveal-slide-up">
+                <!-- Singing -->
+                <div id="content-singing" class="portfolio-grid active">
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/غناء/ياعظيم.jpeg" alt="Singing 1"><div class="project-overlay"><a href="https://www.instagram.com/reel/DOqCm0ojT9D/?igsh=MWM2NjNqYTFyOTNkMw==" class="btn btn-fill" target="_blank" data-en="Watch">مشاهدة</a></div></div>
+                        <div class="project-info"><h3 class="project-title" data-en="Ya Adheem Al-Raja (Chant)">يا عظيم الرجاء</h3></div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/غناء/تشفع.jpeg" alt="Singing 2"><div class="project-overlay"><a href="https://www.instagram.com/reel/DNOWi-7N8Lc/?igsh=YWk4OWkyNm1pbTdk" class="btn btn-fill" target="_blank" data-en="Watch">مشاهدة</a></div></div>
+                        <div class="project-info"><h3 class="project-title" data-en="Intercede, O Messenger of Allah">تشفع يا رسول الله</h3></div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/غناء/شوية.jpeg" alt="Singing 3"><div class="project-overlay"><a href="https://www.instagram.com/reel/C6jG_9QC8WY/?igsh=YjUwdDZuNXYxYW91" class="btn btn-fill" target="_blank" data-en="Watch">مشاهدة</a></div></div>
+                        <div class="project-info"><h3 class="project-title" data-en="Humming Melody">شوية دندنه</h3></div>
+                    </div>
+                </div>
+                
+                <!-- Music -->
+                <div id="content-music" class="portfolio-grid">
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/الموسيقى/تايتنك.jpeg" alt="Music 1"><div class="project-overlay"><a href="https://www.instagram.com/reel/DB174vxCczv/?igsh=YnR4c2NvZ29rNHho" class="btn btn-fill" target="_blank" data-en="Watch">مشاهدة</a></div></div>
+                        <div class="project-info"><h3 class="project-title" data-en="Titanic & Tab Al-Samar">التايتنك & طاب السمر</h3></div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/الموسيقى/تقسيمة.jpeg" alt="Music 2"><div class="project-overlay"><a href="https://www.instagram.com/reel/DLQLJa4tLjs/?igsh=MXF4YjQzbWU1NmYxdg==" class="btn btn-fill" target="_blank" data-en="Watch">مشاهدة</a></div></div>
+                        <div class="project-info"><h3 class="project-title" data-en="Hadhrami Maqam Improvisation">تقسيمة على الهنك الحضرمي</h3></div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/الموسيقى/صحاك.jpeg" alt="Music 3"><div class="project-overlay"><a href="https://www.instagram.com/reel/DOOqb99DeIA/?igsh=cnRwZGY5Ym9mcjEx" class="btn btn-fill" target="_blank" data-en="Watch">مشاهدة</a></div></div>
+                        <div class="project-info"><h3 class="project-title" data-en="Sahak Al-Shooq">صحاك الشوق</h3></div>
+                    </div>
+                </div>
+
+                <!-- Front-End -->
+                <div id="content-frontend" class="portfolio-grid">
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/مطور ويب/مطور ويب.png" alt="Web"></div>
+                        <div class="project-info">
+                            <h3 class="project-title" data-en="Personal Portfolio Website">موقع تعريفي شخصي (Portfolio)</h3>
+                            <p class="project-desc" data-en="A responsive personal website displaying resume and works in a modern style, built from scratch using HTML5 & CSS3 focusing on performance and UX.">موقع شخصي متجاوب يعرض السيرة الذاتية والأعمال بأسلوب عصري، مبني بـ HTML5 و CSS3.</p>
+                            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                            <a href="https://mo-sakaf.github.io/mo_sakaf/" class="btn" style="width:100%" target="_blank" data-en="Visit Site">زيارة الموقع</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/شعار دان.png" alt="Dan Hadhramout"></div>
+                        <div class="project-info">
+                            <h3 class="project-title" data-en="Dan Hadhramout">دان حضرموت</h3>
+                            <p class="project-desc" data-en="A smart digital platform for booking event and wedding services in Hadhramout, connecting event owners with elite creatives.">منصة رقمية مختصة بحجز خدمات المناسبات والأعراس في حضرموت.</p>
+                            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                            <a href="https://mo-sakaf.github.io/Dan-HADRAMOT/" class="btn" style="width:100%" target="_blank" data-en="Visit Site">زيارة الموقع</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/لعبة شعاار.png" alt="Code Rush"></div>
+                        <div class="project-info">
+                            <h3 class="project-title">Code Rush</h3>
+                            <p class="project-desc" data-en="Interactive typing speed game for programmers built with Vanilla JS, featuring Dark Mode and multiple languages.">لعبة سرعة الكتابة للمبرمجين، تفاعلية ومطورة بـ Vanilla JS مع تصميم فاخر.</p>
+                            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                            <a href="https://mo-sakaf.github.io/CODE-RUSH/" class="btn" style="width:100%" target="_blank" data-en="Visit Site">زيارة الموقع</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI/UX -->
+                <div id="content-uiux" class="portfolio-grid">
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/UI UX.png" alt="App"></div>
+                        <div class="project-info">
+                            <h3 class="project-title">FC Hotel Management</h3>
+                            <p class="project-desc" data-en="Hotel management app interface design project aiming to simplify booking and room management with modern UI.">مشروع تصميم واجهات لتطبيق إدارة فنادق بأسلوب حديث وتجربة مستخدم سلسة.</p>
+                            <div class="project-tech"><span>Figma</span></div>
+                            <a href="#" data-modal-target="uiux-overlay" class="btn" style="width:100%" data-en="View Design">عرض التصميم</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/UI/‏‏تطبيق مقاماتي - ui ux/الشعار.png" alt="Mobile App"></div>
+                        <div class="project-info">
+                            <h3 class="project-title" data-en="'Maqamati' App">تطبيق " مقامـــاتي "</h3>
+                            <p class="project-desc" data-en="A comprehensive interactive web app for teaching Arabic music, combining a Maqam encyclopedia, and auditory tests.">تطبيق ويب تفاعلي شامل لتعليم الموسيقى العربية والمقامات في واجهة عصرية تحاكي تطبيقات الجوال.</p>
+                            <div class="project-tech"><span>Figma</span></div>
+                            <a href="#" data-modal-target="uiux-overlay-mobile" class="btn" style="width:100%" data-en="View Interfaces">عرض الواجهات</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/شعار دان.png" alt="Dashboard"></div>
+                        <div class="project-info">
+                            <h3 class="project-title" data-en="Dan Hadhramout">دان حضرموت</h3>
+                            <p class="project-desc" data-en="Smart digital platform specialized in booking event services in Hadhramout.">منصة رقمية ذكية ومختصة بحجز خدمات المناسبات والأعراس في حضرموت.</p>
+                            <div class="project-tech"><span>Figma</span></div>
+                            <a href="#" data-modal-target="uiux-overlay-dashboard" class="btn" style="width:100%" data-en="View Design">عرض التصميم</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Montage -->
+                <div id="content-montage" class="portfolio-grid">
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/مونتاج/بذرة.png" alt="Bthra"><div class="project-overlay"><a href="https://www.instagram.com/reel/DXXAMJTDPdD/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" class="btn btn-fill" target="_blank" data-en="Watch">مشاهدة</a></div></div>
+                        <div class="project-info"><h3 class="project-title" data-en="Bthra Music Video">فيديو كليب بذرة</h3></div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/مونتاج/WhatsApp Image 2026-01-09 at 8.54.15 PM.jpeg" alt="Montage 1"><div class="project-overlay"><a href="https://www.instagram.com/reel/DRxXaXUjVU6/?igsh=Ymd1b3hmNmcyaHR2" class="btn btn-fill" target="_blank" data-en="Watch">مشاهدة</a></div></div>
+                        <div class="project-info"><h3 class="project-title" data-en="Trip Vlog">فلوق رحلة</h3></div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/مونتاج/لحظة.jpeg" alt="Montage 2"><div class="project-overlay"><a href="https://www.instagram.com/reel/DPWylnLDXW0/?igsh=MWgwanNpaHZ4cnY2OA==" class="btn btn-fill" target="_blank" data-en="Watch">مشاهدة</a></div></div>
+                        <div class="project-info"><h3 class="project-title" data-en="Moment of Regret">لحظة ندم</h3></div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper"><img src="Image/مونتاج/حياتنا.jpeg" alt="Montage 3"><div class="project-overlay"><a href="https://www.instagram.com/reel/DPWxXgJjVn7/?igsh=enE5bzE0b3hjYThv" class="btn btn-fill" target="_blank" data-en="Watch">مشاهدة</a></div></div>
+                        <div class="project-info"><h3 class="project-title" data-en="University Life">حياتنا الجامعية و مركز أحمد</h3></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI/UX MODALS -->
+    <div id="uiux-overlay" class="portfolio-overlay">
+        <div class="modal-content glass-card">
+            <a href="#" class="close-overlay" aria-label="إغلاق">×</a>
+            <h2 style="color:var(--accent); margin-bottom:20px; text-align:center;">FC Hotel Management</h2>
+            <div class="modal-gallery">
+                <img src="Image/UI/3. loging 1.png" alt="Screen 1">
+                <img src="Image/UI/4. Dashboard @.png" alt="Screen 2">
+                <img src="Image/UI/5. Reservations @.png" alt="Screen 3">
+                <img src="Image/UI/14. Payment completed .png" alt="Screen 4">
+                <img src="Image/UI/15. Rooms @.png" alt="Screen 5">
+            </div>
+        </div>
+    </div>
+
+    <div id="uiux-overlay-mobile" class="portfolio-overlay">
+        <div class="modal-content glass-card">
+            <a href="#" class="close-overlay">×</a>
+            <h2 style="color:var(--accent); margin-bottom:20px; text-align:center;" data-en="'Maqamati' App">تطبيق " مقامـــاتي " </h2>
+            <div class="modal-gallery mobile-gallery">
+                <img src="Image/UI/‏‏تطبيق مقاماتي - ui ux/البداية.png" alt="واجهة 1">
+                <img src="Image/UI/‏‏تطبيق مقاماتي - ui ux/الوقين.png" alt="واجهة 2">
+                <img src="Image/UI/‏‏تطبيق مقاماتي - ui ux/1.png" alt="واجهة 3">
+                <img src="Image/UI/‏‏تطبيق مقاماتي - ui ux/2.png" alt="واجهة 4">
+                <img src="Image/UI/‏‏تطبيق مقاماتي - ui ux/3.png" alt="واجهة 5">
+                <img src="Image/UI/‏‏تطبيق مقاماتي - ui ux/4.png" alt="واجهة 6">
+            </div>
+        </div>
+    </div>
+
+    <div id="uiux-overlay-dashboard" class="portfolio-overlay">
+        <div class="modal-content glass-card">
+            <a href="#" class="close-overlay">×</a>
+            <h2 style="color:var(--accent); margin-bottom:20px; text-align:center;" data-en="Dan Hadhramout">دان حضرموت</h2>
+            <div class="modal-gallery">
+                <img src="Image/UI/‏‏دان حضرموت للمناسبات ui ux/1.png" alt="Screen 1">
+                <img src="Image/UI/‏‏دان حضرموت للمناسبات ui ux/2.png" alt="Screen 2">
+                <img src="Image/UI/‏‏دان حضرموت للمناسبات ui ux/3.png" alt="Screen 3">
+                <img src="Image/UI/‏‏دان حضرموت للمناسبات ui ux/4.png" alt="Screen 4">
+                <img src="Image/UI/‏‏دان حضرموت للمناسبات ui ux/5.png" alt="Screen 5">
+                <img src="Image/UI/‏‏دان حضرموت للمناسبات ui ux/6.png" alt="Screen 6">
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. CONTACT & FOOTER -->
+    <section id="contact" style="background: var(--bg-card); padding-bottom: 40px; min-height: auto;">
+        <div class="container">
+            <h2 class="section-title reveal reveal-slide-up" data-en="Contact Me">تواصل معي</h2>
+            <p style="color: var(--text-muted); margin-bottom: 40px; text-align: center; font-size: 1.2rem;" class="reveal reveal-fade" data-en="Hadhramout - Yemen">
+                حضرموت - اليمن
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-group reveal reveal-zoom delay-1">
+                    <h3 data-en="Follow me on Social Media">تابعني على السوشيال ميديا</h3>
+                    <div class="social-icons">
+                        <a href="https://youtube.com/@mo_sakaf?si=kgri43K_7QS99ZlP" class="social-btn yt" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com/mo_sakaf" class="social-btn ig" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.threads.com/@mo_sakaf" class="social-btn th" title="Threads" target="_blank"><i class="fa-brands fa-threads"></i></a>
+                        <a href="https://www.linkedin.com/in/mohammed-%D9%85%D8%AD%D9%85%D8%AF-%D8%B9%D9%85%D8%B1-%D8%A7%D9%84%D8%B3%D9%82%D8%A7%D9%81-alssgaf-a3029832b?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app" class="social-btn in" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-group reveal reveal-zoom delay-2">
+                    <h3 data-en="Contact Me Directly">تواصل معي مباشرة</h3>
+                    <div class="social-icons">
+                        <a href="https://wa.me/967770721148" class="social-btn wa" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:+967770721148" class="social-btn tel" title="اتصال"><i class="fas fa-phone-alt"></i></a>
+                        <a href="https://t.me/mo_sakaf" class="social-btn tg" title="Telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="mailto:moh711148120@gmail.com" class="social-btn em" title="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-quote reveal reveal-fade" style="margin-top: 60px;" data-en="( Thank you for visiting my site.. I look forward to turning your ideas into reality with creativity and professionalism ☺️🤍 )">
+                ( <span>شكرا لزيارتك موقعي .. أتطلع لتحويل أفكارك الى واقع بإبداع و احتراف ☺️🤍</span> )
+            </div>
+            
+            <div class="footer-note reveal reveal-fade" data-en="* Note: Certified and documented references and certificates are available upon request to prove all the above.">
+                <span style="color: var(--accent);">*</span> ملاحظة : تتوفر شهادات ومراجع معتمدة وموثقة لإثبات جميع المذكور أعلاه عند الطلب.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-note" data-en="&copy; 2026 Mohammed Omar Al-Saggaf – All Rights Reserved">
+                &copy; 2026 محمد عمر عبدالقادر السقاف – جميع الحقوق محفوظة
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

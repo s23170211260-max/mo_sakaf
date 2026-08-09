@@ -1,0 +1,95 @@
+/* --- ANIMATIONS CSS --- */
+
+/* Base Reveal Class */
+.reveal {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform, opacity, filter;
+}
+
+/* 1. Fade */
+.reveal-fade {
+    transform: translateY(0);
+}
+.reveal-fade.active {
+    opacity: 1;
+}
+
+/* 2. Slide Up */
+.reveal-slide-up {
+    transform: translateY(50px);
+}
+.reveal-slide-up.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* 3. Slide Left/Right */
+.reveal-slide-left {
+    transform: translateX(50px);
+}
+.reveal-slide-right {
+    transform: translateX(-50px);
+}
+.reveal-slide-left.active,
+.reveal-slide-right.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* 4. Zoom In */
+.reveal-zoom {
+    transform: scale(0.9);
+}
+.reveal-zoom.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* 5. Blur */
+.reveal-blur {
+    filter: blur(10px);
+    transform: scale(1.05);
+}
+.reveal-blur.active {
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Stagger Delays (applied via JS or CSS child selectors) */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* KEYFRAMES */
+
+@keyframes fillText {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes scrollWheel {
+    0% { top: 6px; opacity: 1; }
+    100% { top: 20px; opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Particles Canvas */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}

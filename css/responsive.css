@@ -1,0 +1,102 @@
+/* --- RESPONSIVE CSS --- */
+
+/* 1920px & Above (Large Desktop) */
+@media (min-width: 1920px) {
+    .container { max-width: 1600px; }
+    .hero h1 { font-size: 5.5rem; }
+    .hero .typing-text { font-size: 2rem; }
+}
+
+/* 1440px (Standard Desktop) */
+@media (max-width: 1440px) {
+    .container { max-width: 1200px; }
+}
+
+/* 1024px (Laptops / Tablets Landscape) */
+@media (max-width: 1024px) {
+    .hero h1 { font-size: 3.5rem; }
+    .hero .typing-text { font-size: 1.3rem; }
+    .profile-img-container { width: 180px; height: 180px; }
+    .section-title { font-size: 2.5rem; }
+    
+    .timeline-wrapper::before { left: 30px; }
+    .timeline-item { width: 100%; padding-left: 80px; padding-right: 0; margin-left: 0; margin-right: 0; }
+    .timeline-item:nth-child(even) { padding-left: 80px; padding-right: 0; margin-left: 0; margin-right: 0; }
+    .timeline-dot, .timeline-item:nth-child(even) .timeline-dot { left: 18px; right: auto; }
+    
+    html[dir="rtl"] .timeline-wrapper::before { left: auto; right: 30px; }
+    html[dir="rtl"] .timeline-item { padding-right: 80px; padding-left: 0; margin-left: 0; margin-right: 0; }
+    html[dir="rtl"] .timeline-item:nth-child(even) { padding-right: 80px; padding-left: 0; margin-left: 0; margin-right: 0; }
+    html[dir="rtl"] .timeline-dot, html[dir="rtl"] .timeline-item:nth-child(even) .timeline-dot { right: 18px; left: auto; }
+}
+
+/* 768px (Tablets Portrait / Large Phones) */
+@media (max-width: 768px) {
+    section { padding: 80px 0; }
+    .navbar { padding: 15px 5%; }
+    .hero h1 { font-size: 2.8rem; }
+    .hero .typing-text { font-size: 1.1rem; }
+    .profile-img-container { width: 150px; height: 150px; }
+    
+    .sidebar-menu { width: 100%; padding: 100px 30px 30px; }
+    
+    .about-text p { font-size: 1.1rem; }
+    .stat-number { font-size: 2.5rem; }
+    
+    .profile-top-section, .skills-detailed-grid, .courses-grid, .roles-grid { grid-template-columns: 1fr; }
+    
+    .course-card { flex-direction: column; text-align: center; align-items: center; }
+    .course-details-list li::before { display: none; }
+    .course-details-list li { padding: 0 !important; }
+    
+    .portfolio-overlay { padding: 20px 10px; }
+    .modal-content { padding: 40px 20px; border-radius: 12px; }
+    .modal-gallery { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+    .mobile-gallery { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+}
+
+/* 425px (Mobile Landscape) */
+@media (max-width: 425px) {
+    .hero h1 { font-size: 2.2rem; }
+    .hero .typing-text { font-size: 0.95rem; }
+    .btn { padding: 12px 25px; font-size: 0.9rem; }
+    
+    .section-title { font-size: 2rem; margin-bottom: 2.5rem;}
+    
+    .timeline-wrapper::before { left: 20px; }
+    .timeline-item { padding-left: 50px; }
+    .timeline-item:nth-child(even) { padding-left: 50px; }
+    .timeline-dot, .timeline-item:nth-child(even) .timeline-dot { left: 8px; width: 20px; height: 20px;}
+    
+    html[dir="rtl"] .timeline-wrapper::before { right: 20px; left: auto; }
+    html[dir="rtl"] .timeline-item { padding-right: 50px; padding-left: 0; }
+    html[dir="rtl"] .timeline-item:nth-child(even) { padding-right: 50px; padding-left: 0; }
+    html[dir="rtl"] .timeline-dot, html[dir="rtl"] .timeline-item:nth-child(even) .timeline-dot { right: 8px; left: auto; width: 20px; height: 20px;}
+    
+    .modal-gallery { grid-template-columns: 1fr; }
+    .close-overlay { font-size: 2rem; top: 10px; left: 15px; }
+    html[dir="ltr"] .close-overlay { right: 15px; left: auto; }
+}
+
+/* 375px (Standard Mobile) */
+@media (max-width: 375px) {
+    .nav-logo img { height: 35px; }
+    .lang-btn { padding: 6px 15px; font-size: 0.8rem; }
+    .hero h1 { font-size: 2rem; }
+    .profile-img-container { width: 130px; height: 130px; }
+    .social-btn { width: 50px; height: 50px; font-size: 1.2rem; }
+}
+
+/* 320px (Small Mobile) */
+@media (max-width: 320px) {
+    .hero h1 { font-size: 1.8rem; }
+    .hero .typing-text { font-size: 0.85rem; min-height: 48px; }
+    .hero-buttons { flex-direction: column; gap: 10px; width: 100%; padding: 0 20px; }
+    .btn { width: 100%; text-align: center; }
+}
+
+/* Hide Custom Cursor on Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+    #custom-cursor { display: none; }
+    body, a, .hamburger, .tab-btn, .project-card, .btn { cursor: auto; }
+}
